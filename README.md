@@ -1,22 +1,22 @@
-# 💜 TrueNorth – PERMA+4 Enhanced Agentic RAG for Long-term Conversational Assistance and Retention Engagement
+# TrueNorth – PERMA+4 Enhanced Agentic RAG for Long-term Conversational Assistance and Retention Engagement
 ![Figure 2](img/Figure2.png)
 
 TrueNorth is an AI-powered support assistant designed to empower early-career professionals pioneering the cutting-edge STEM industry. It provides a safe and anonymous space for mentorship, career guidance, emotional support, and navigating high-stakes workplace situations.
 
 ---
-## ✨ Features
+## Features
 
-- 🤖 **Conversational Agent** built with Google Gemini for empathetic and informative support  
-- 🔍 **Multi-query Retrieval-Augmented Generation (RAG)** with MMR and RRF for accurate answers  
-- 📚 **Custom Vector Database** using Postgres or Langchain FAISS Local Vector Store to index curated resources and books  
-- 🌐 **Tavily Web Search** integration for current, real-world information  
-- ✅ **Answer Verification** using hallucination and relevance grading  
-- 🧠 **Query Rewriting** for improving search coverage  
-- 🎨 **Streamlit Frontend** with a feminine and empowering aesthetic  
+- **Conversational Agent** built with Google Gemini for empathetic and informative support  
+- **Multi-query Retrieval-Augmented Generation (RAG)** with MMR and RRF for accurate answers  
+- **Custom Vector Database** using Postgres or Langchain FAISS Local Vector Store to index curated resources and books  
+- **Tavily Web Search** integration for current, real-world information  
+- **Answer Verification** using hallucination and relevance grading  
+- **Query Rewriting** for improving search coverage  
+- **Streamlit Frontend** with a feminine and empowering aesthetic  
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component    | Technology                              |
 |--------------|------------------------------------------|
@@ -56,22 +56,22 @@ export GOOGLE_CLOUD_LOCATION=us-central1
 ...check out `.env.example` for a file you can copy.
 
 # Setup
-## 📚 1. Preprocess & Embed  PDFs
+## 1. Preprocess & Embed  PDFs
 
 Before running the chatbot, convert your PDFs into searchable vector embeddings:
 
 ```python Knowledge.py```
 
-⏳ This process may take 20+ minutes depending on the number and size of PDFs. Data is uploaded to the PostgreSQL vectorstore (pgvector).
+This process may take 20+ minutes depending on the number and size of PDFs. Data is uploaded to the PostgreSQL vectorstore (pgvector).
 
 
-## 📡 2. Launch Chatbot API (FastAPI)
+## 2. Launch Chatbot API (FastAPI)
 
 Start the backend server (runs on port 8000):
 
 `poetry run uvicorn truenorth.app:app --reload`
 
-### 🔗 API Docs
+### API Docs
 
 Once running, access the API docs and test endpoints at:
 
@@ -79,7 +79,7 @@ Once running, access the API docs and test endpoints at:
 
 This Swagger UI lets you test Streamlit UI programmatically and inspect endpoint responses.
 
-## 🌸 3. Launch the Streamlit UI
+## 3. Launch the Streamlit UI
 
 In a separate terminal, start the frontend (runs on port 8501):
 
@@ -91,10 +91,10 @@ Then go to your browser:
 
 This interface connects to the API and provides an interactive chatbot experience.
 
-## 📐 4. Evaluation Workflows
+## 4. Evaluation Workflows
 TrueNorth implements a comprehensive evaluation framework with 14 distinct metrics organized into two categories:
 
-### ✅ Conversational Agent (Statkus et al., 2024)
+### Conversational Agent (Statkus et al., 2024)
 
 - **Anthropomorphism** - Human-like interaction quality
 - **Attractivity** - Visual appeal and engagement
@@ -104,7 +104,7 @@ TrueNorth implements a comprehensive evaluation framework with 14 distinct metri
 - **Usefulness** - Practical value and helpfulness
 - **Accessibility** - Ease of access and interaction
 
-✅ Meta-Requirements for Individualized STEM Support:
+Meta-Requirements for Individualized STEM Support:
 
 - **MR1**: Gender-Conscious Engagement - Avoids stereotypes, fosters gender diversity respect
 - **MR2**: Empathic Intuition - Emotionally aware and naturally caring responses
@@ -124,7 +124,7 @@ Outputs are saved to:
 
 Each row shows binary scores for each design quality.
 
-# ✅ Makefile Usage
+# Makefile Usage
 
 If `make` is installed, you can simplify operations with:
 
